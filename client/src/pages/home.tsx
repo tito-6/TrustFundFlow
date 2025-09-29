@@ -153,11 +153,11 @@ export default function Home() {
                 <>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                     مكتب الحاضر المالي<br/>
-                    <span className="text-accent">حلول مالية موثوقة</span><br/>
-                    في الحاضر، حلب
+                    <span className="text-accent">مكتب حوالة وصرافة موثوق</span><br/>
+                    في المحللق الجنوبي، حلب
                   </h1>
                   <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto lg:mx-0">
-                    صرافة وحوالات سريعة وآمنة. في قلب قرية الحاضر لخدمة مجتمعنا المحلي بأفضل الأسعار والخدمات الموثوقة.
+                    مكتب حوالة وصرافة سريعة وآمنة. في شارع السربيس، المحللق الجنوبي لخدمة مجتمعنا المحلي بأفضل الأسعار والخدمات الموثوقة.
                   </p>
                 </>
               )}
@@ -165,11 +165,11 @@ export default function Home() {
                 <>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-latin">
                     Al-Hader Financial<br/>
-                    <span className="text-accent">Trusted Financial Solutions</span><br/>
-                    in Al-Hader, Aleppo
+                    <span className="text-accent">Trusted Hawala & Exchange Office</span><br/>
+                    in Al-Mahallak Al-Janoubi, Aleppo
                   </h1>
                   <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto lg:mx-0 font-latin">
-                    Fast and secure currency exchange and transfers. In the heart of Al-Hader village to serve our local community with the best rates and trusted services.
+                    Fast and secure hawala office and currency exchange. In Al-Sarbis Street, Al-Mahallak Al-Janoubi to serve our local community with the best rates and trusted services.
                   </p>
                 </>
               )}
@@ -177,18 +177,18 @@ export default function Home() {
                 <>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-latin">
                     Al-Hader Mali<br/>
-                    <span className="text-accent">Güvenilir Mali Çözümler</span><br/>
-                    Al-Hader, Halep'te
+                    <span className="text-accent">Güvenilir Havale ve Döviz Ofisi</span><br/>
+                    Al-Mahallak Al-Janoubi, Halep'te
                   </h1>
                   <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto lg:mx-0 font-latin">
-                    Hızlı ve güvenli döviz bozdurma ve havale hizmetleri. Al-Hader köyünün kalbinde, yerel topluluğumuza en iyi oranlar ve güvenilir hizmetlerle hizmet vermek için.
+                    Hızlı ve güvenli havale ofisi ve döviz bozdurma hizmetleri. Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi'de yerel topluluğumuza en iyi oranlar ve güvenilir hizmetlerle hizmet vermek için.
                   </p>
                 </>
               )}
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a 
-                  href="https://wa.me/963999999999" 
+                  href="https://wa.me/905355002504" 
                   className="gold-gradient text-accent-foreground px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 inline-flex items-center justify-center"
                   data-testid="button-whatsapp-transfer"
                 >
@@ -199,7 +199,7 @@ export default function Home() {
                 </a>
                 
                 <a 
-                  href="tel:+963999999999" 
+                  href="tel:+905355002504" 
                   className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all inline-flex items-center justify-center"
                   data-testid="button-phone-call"
                 >
@@ -246,25 +246,25 @@ export default function Home() {
           <div className="text-center mb-12">
             {shouldShowLanguage("ar") && (
               <>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">أسعار الصرف والحوالات اليومية</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">أسعار الصرف ومكتب الحوالة اليومية</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  أسعار محدثة لحظياً لضمان أفضل صفقة لعملائنا الكرام
+                  أسعار محدثة لحظياً في مكتب الحوالة لضمان أفضل صفقة لعملائنا الكرام
                 </p>
               </>
             )}
             {shouldShowLanguage("en") && (
               <>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Daily Exchange and Transfer Rates</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Daily Exchange and Hawala Office Rates</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-latin">
-                  Real-time updated rates to ensure the best deal for our valued customers
+                  Real-time updated rates at our hawala office to ensure the best deal for our valued customers
                 </p>
               </>
             )}
             {shouldShowLanguage("tr") && (
               <>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Günlük Döviz ve Transfer Oranları</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Günlük Döviz ve Havale Ofisi Oranları</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-latin">
-                  Değerli müşterilerimiz için en iyi fırsatı garanti etmek üzere gerçek zamanlı güncellenmiş oranlar
+                  Havale ofisimizde değerli müşterilerimiz için en iyi fırsatı garanti etmek üzere gerçek zamanlı güncellenmiş oranlar
                 </p>
               </>
             )}
@@ -382,22 +382,22 @@ export default function Home() {
               </div>
               {shouldShowLanguage("ar") && (
                 <>
-                  <h3 className="text-xl font-bold mb-4">الحوالات المالية</h3>
-                  <p className="text-muted-foreground mb-6">حوالات سريعة وآمنة إلى جميع أنحاء العالم بأفضل الأسعار وأعلى معايير الأمان</p>
+                  <h3 className="text-xl font-bold mb-4">مكتب الحوالة</h3>
+                  <p className="text-muted-foreground mb-6">مكتب حوالة سريع وآمن إلى جميع أنحاء العالم بأفضل الأسعار وأعلى معايير الأمان</p>
                   <a href="#contact" className="text-primary font-bold hover:underline" data-testid="link-transfers-learn-more">اعرف المزيد →</a>
                 </>
               )}
               {shouldShowLanguage("en") && (
                 <>
-                  <h3 className="text-xl font-bold mb-4 font-latin">Money Transfers</h3>
-                  <p className="text-muted-foreground mb-6 font-latin">Fast and secure transfers worldwide with the best rates and highest security standards</p>
+                  <h3 className="text-xl font-bold mb-4 font-latin">Hawala Office</h3>
+                  <p className="text-muted-foreground mb-6 font-latin">Fast and secure hawala office worldwide with the best rates and highest security standards</p>
                   <a href="#contact" className="text-primary font-bold hover:underline font-latin" data-testid="link-transfers-learn-more">Learn More →</a>
                 </>
               )}
               {shouldShowLanguage("tr") && (
                 <>
-                  <h3 className="text-xl font-bold mb-4 font-latin">Para Transferleri</h3>
-                  <p className="text-muted-foreground mb-6 font-latin">En iyi oranlar ve en yüksek güvenlik standartlarıyla dünya çapında hızlı ve güvenli transferler</p>
+                  <h3 className="text-xl font-bold mb-4 font-latin">Havale Ofisi</h3>
+                  <p className="text-muted-foreground mb-6 font-latin">En iyi oranlar ve en yüksek güvenlik standartlarıyla dünya çapında hızlı ve güvenli havale ofisi</p>
                   <a href="#contact" className="text-primary font-bold hover:underline font-latin" data-testid="link-transfers-learn-more">Daha Fazla Bilgi →</a>
                 </>
               )}
@@ -657,19 +657,19 @@ export default function Home() {
                     {shouldShowLanguage("ar") && (
                       <>
                         <h3 className="font-bold text-lg mb-2">عنواننا</h3>
-                        <p className="text-muted-foreground">قرية الحاضر، الشارع الرئيسي<br/>مدينة حلب، سوريا</p>
+                        <p className="text-muted-foreground">المحللق الجنوبي، شارع السربيس<br/>مدينة حلب، سوريا</p>
                       </>
                     )}
                     {shouldShowLanguage("en") && (
                       <>
                         <h3 className="font-bold text-lg mb-2 font-latin">Our Address</h3>
-                        <p className="text-muted-foreground font-latin">Al-Hader Village, Main Street<br/>Aleppo City, Syria</p>
+                        <p className="text-muted-foreground font-latin">Al-Mahallak Al-Janoubi, Al-Sarbis Street<br/>Aleppo City, Syria</p>
                       </>
                     )}
                     {shouldShowLanguage("tr") && (
                       <>
                         <h3 className="font-bold text-lg mb-2 font-latin">Adresimiz</h3>
-                        <p className="text-muted-foreground font-latin">Al-Hader Köyü, Ana Cadde<br/>Halep, Suriye</p>
+                        <p className="text-muted-foreground font-latin">Al-Mahallak Al-Janoubi, Al-Sarbis Caddesi<br/>Halep, Suriye</p>
                       </>
                     )}
                   </div>
@@ -716,22 +716,22 @@ export default function Home() {
               
               {/* Contact Methods */}
               <div className="grid sm:grid-cols-3 gap-4">
-                <a href="tel:+963999999999" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-phone">
+                <a href="tel:+905355002504" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-phone">
                   <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <i className="fas fa-phone text-white text-xl"></i>
                   </div>
                   {shouldShowLanguage("ar") && <h4 className="font-bold mb-2">اتصل بنا</h4>}
                   {shouldShowLanguage("en") && <h4 className="font-bold mb-2 font-latin">Call Us</h4>}
                   {shouldShowLanguage("tr") && <h4 className="font-bold mb-2 font-latin">Arayın</h4>}
-                  <p className="text-sm text-muted-foreground">+963 99 999 9999</p>
+                  <p className="text-sm text-muted-foreground">+90 535 500 25 04</p>
                 </a>
                 
-                <a href="https://wa.me/963999999999" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-whatsapp">
+                <a href="https://wa.me/905355002504" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-whatsapp">
                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <i className="fab fa-whatsapp text-white text-xl"></i>
                   </div>
                   <h4 className="font-bold mb-2">WhatsApp</h4>
-                  <p className="text-sm text-muted-foreground">+963 99 999 9999</p>
+                  <p className="text-sm text-muted-foreground">+90 535 500 25 04</p>
                 </a>
                 
                 <a href="https://t.me/alhaderfinancial" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-telegram">
@@ -760,19 +760,19 @@ export default function Home() {
                   </div>
                   {shouldShowLanguage("ar") && (
                     <>
-                      <h4 className="font-bold text-lg">قرية الحاضر</h4>
+                      <h4 className="font-bold text-lg">المحللق الجنوبي</h4>
                       <p className="text-muted-foreground">حلب، سوريا</p>
                     </>
                   )}
                   {shouldShowLanguage("en") && (
                     <>
-                      <h4 className="font-bold text-lg font-latin">Al-Hader Village</h4>
+                      <h4 className="font-bold text-lg font-latin">Al-Mahallak Al-Janoubi</h4>
                       <p className="text-muted-foreground font-latin">Aleppo, Syria</p>
                     </>
                   )}
                   {shouldShowLanguage("tr") && (
                     <>
-                      <h4 className="font-bold text-lg font-latin">Al-Hader Köyü</h4>
+                      <h4 className="font-bold text-lg font-latin">Al-Mahallak Al-Janoubi</h4>
                       <p className="text-muted-foreground font-latin">Halep, Suriye</p>
                     </>
                   )}
@@ -859,17 +859,17 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3 space-x-reverse">
                   <i className="fas fa-phone text-accent"></i>
-                  <span className="text-background/80">+963 99 999 9999</span>
+                  <span className="text-background/80">+90 535 500 25 04</span>
                 </li>
                 <li className="flex items-center space-x-3 space-x-reverse">
                   <i className="fab fa-whatsapp text-accent"></i>
-                  <span className="text-background/80">+963 99 999 9999</span>
+                  <span className="text-background/80">+90 535 500 25 04</span>
                 </li>
                 <li className="flex items-center space-x-3 space-x-reverse">
                   <i className="fas fa-map-marker-alt text-accent"></i>
-                  {shouldShowLanguage("ar") && <span className="text-background/80">قرية الحاضر، حلب</span>}
-                  {shouldShowLanguage("en") && <span className="text-background/80 font-latin">Al-Hader, Aleppo</span>}
-                  {shouldShowLanguage("tr") && <span className="text-background/80 font-latin">Al-Hader, Halep</span>}
+                  {shouldShowLanguage("ar") && <span className="text-background/80">المحللق الجنوبي، حلب</span>}
+                  {shouldShowLanguage("en") && <span className="text-background/80 font-latin">Al-Mahallak Al-Janoubi, Aleppo</span>}
+                  {shouldShowLanguage("tr") && <span className="text-background/80 font-latin">Al-Mahallak Al-Janoubi, Halep</span>}
                 </li>
               </ul>
             </div>
