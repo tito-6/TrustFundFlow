@@ -126,18 +126,51 @@ export default function Home() {
               </a>
             </div>
             
-            {/* Language Switcher */}
+            {/* Language Switcher with Flags */}
             <div className="flex items-center space-x-2 space-x-reverse">
-              <select 
-                value={currentLanguage}
-                onChange={(e) => changeLanguage(e.target.value)}
-                className="bg-secondary border border-border rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
-                data-testid="language-selector"
-              >
-                <option value="ar">العربية</option>
-                <option value="en">English</option>
-                <option value="tr">Türkçe</option>
-              </select>
+              <div className="flex bg-secondary/50 rounded-lg p-1 border border-border">
+                <button
+                  onClick={() => changeLanguage("ar")}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                    currentLanguage === "ar" 
+                      ? "bg-white shadow-sm text-primary border border-primary/20" 
+                      : "text-muted-foreground hover:text-primary hover:bg-white/50"
+                  }`}
+                  data-testid="lang-ar"
+                  title="العربية"
+                >
+                  <span className="text-lg">🇵🇸</span>
+                  <span>العربية</span>
+                </button>
+                
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                    currentLanguage === "en" 
+                      ? "bg-white shadow-sm text-primary border border-primary/20" 
+                      : "text-muted-foreground hover:text-primary hover:bg-white/50"
+                  }`}
+                  data-testid="lang-en"
+                  title="English"
+                >
+                  <span className="text-lg">🇺🇸</span>
+                  <span className="font-latin">EN</span>
+                </button>
+                
+                <button
+                  onClick={() => changeLanguage("tr")}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                    currentLanguage === "tr" 
+                      ? "bg-white shadow-sm text-primary border border-primary/20" 
+                      : "text-muted-foreground hover:text-primary hover:bg-white/50"
+                  }`}
+                  data-testid="lang-tr"
+                  title="Türkçe"
+                >
+                  <span className="text-lg">🇹🇷</span>
+                  <span className="font-latin">TR</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -152,36 +185,36 @@ export default function Home() {
               {shouldShowLanguage("ar") && (
                 <>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                    مكتب الحاضر المالي<br/>
-                    <span className="text-accent">مكتب حوالة وصرافة موثوق</span><br/>
-                    في المحللق الجنوبي، حلب
+                    مكتب دوفيز المالي<br/>
+                    <span className="text-accent">للصرافة والحوالات السريعة</span><br/>
+                    في المحللق الجنوبي، الحاضر، حلب
                   </h1>
                   <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto lg:mx-0">
-                    مكتب حوالة وصرافة سريعة وآمنة. في شارع السربيس، المحللق الجنوبي لخدمة مجتمعنا المحلي بأفضل الأسعار والخدمات الموثوقة.
+                    مكتب دوفيز للصرافة والحوالات - خدمات مالية سريعة وآمنة. في شارع السرفيس، المحللق الجنوبي، الحاضر لخدمة مجتمعنا المحلي بأفضل الأسعار والخدمات الموثوقة.
                   </p>
                 </>
               )}
               {shouldShowLanguage("en") && (
                 <>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-latin">
-                    Al-Hader Financial<br/>
-                    <span className="text-accent">Trusted Hawala & Exchange Office</span><br/>
-                    in Al-Mahallak Al-Janoubi, Aleppo
+                    DOVIZ Financial<br/>
+                    <span className="text-accent">Trusted Exchange & Money Transfer</span><br/>
+                    in Al-Mahallak Al-Janoubi, Al-Hader, Aleppo
                   </h1>
                   <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto lg:mx-0 font-latin">
-                    Fast and secure hawala office and currency exchange. In Al-Sarbis Street, Al-Mahallak Al-Janoubi to serve our local community with the best rates and trusted services.
+                    DOVIZ Exchange and Money Transfer - Fast and secure financial services. In Al-Sarbis Street, Al-Mahallak Al-Janoubi to serve our local community with the best rates and trusted services.
                   </p>
                 </>
               )}
               {shouldShowLanguage("tr") && (
                 <>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-latin">
-                    Al-Hader Mali<br/>
-                    <span className="text-accent">Güvenilir Havale ve Döviz Ofisi</span><br/>
+                    DOVIZ Mali<br/>
+                    <span className="text-accent">Güvenilir Döviz ve Para Transferi</span><br/>
                     Al-Mahallak Al-Janoubi, Halep'te
                   </h1>
                   <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto lg:mx-0 font-latin">
-                    Hızlı ve güvenli havale ofisi ve döviz bozdurma hizmetleri. Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi'de yerel topluluğumuza en iyi oranlar ve güvenilir hizmetlerle hizmet vermek için.
+                    DOVIZ Döviz ve Para Transferi - Hızlı ve güvenli mali hizmetler. Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi'de yerel topluluğumuza en iyi oranlar ve güvenilir hizmetlerle hizmet vermek için.
                   </p>
                 </>
               )}
@@ -215,6 +248,22 @@ export default function Home() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
                 <div className="w-80 h-80 relative">
+                  {/* Main hero image */}
+                  <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                    <img 
+                      src="/images/hero-financial-services.jpg" 
+                      alt={
+                        shouldShowLanguage("ar") ? "خدمات مالية موثوقة - مكتب دوفيز المالي" :
+                        shouldShowLanguage("en") ? "Trusted Financial Services - DOVIZ Financial" :
+                        "Güvenilir Mali Hizmetler - DOVIZ Mali"
+                      }
+                      className="w-full h-full object-contain bg-white/10 backdrop-blur-sm"
+                    />
+                    {/* Overlay with floating icons */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                  
+                  {/* Floating service icons */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center animate-float">
                     <i className="fas fa-shield-alt text-accent text-3xl"></i>
                   </div>
@@ -229,9 +278,6 @@ export default function Home() {
                   </div>
                   <div className="absolute bottom-1/4 right-1/4 w-18 h-18 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center animate-float" style={{animationDelay: "2s"}}>
                     <i className="fas fa-handshake text-accent text-2xl"></i>
-                  </div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-2xl">
-                    <i className="fas fa-exchange-alt text-primary text-4xl"></i>
                   </div>
                 </div>
               </div>
@@ -582,6 +628,79 @@ export default function Home() {
             </div>
           </div>
           
+          {/* Office Image Section */}
+          <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border border-border p-4">
+                <img 
+                  src="/images/exchange-office-interior.jpg" 
+                  alt={
+                    shouldShowLanguage("ar") ? "داخل مكتب دوفيز المالي - مكتب حوالة وصرافة" :
+                    shouldShowLanguage("en") ? "Inside DOVIZ Financial - Exchange and Money Transfer Office" :
+                    "DOVIZ Mali İçerisi - Döviz ve Para Transfer Ofisi"
+                  }
+                  className="w-full h-80 object-contain rounded-xl bg-gradient-to-br from-secondary/30 to-primary/10"
+                />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 text-center lg:text-right">
+              {shouldShowLanguage("ar") && (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6">مكتبنا في خدمتكم</h3>
+                  <p className="text-muted-foreground text-lg mb-6">
+                    يقع مكتبنا في موقع مثالي في شارع السرفيس، المحللق الجنوبي، الحاضر، مجهز بأحدث التقنيات لخدمتكم بأفضل طريقة ممكنة.
+                  </p>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center justify-center lg:justify-end">
+                      <i className="fas fa-map-marker-alt text-primary text-xl ml-3"></i>
+                      <span>شارع السرفيس، المحللق الجنوبي، الحاضر، حلب</span>
+                    </div>
+                    <div className="flex items-center justify-center lg:justify-end">
+                      <i className="fas fa-clock text-primary text-xl ml-3"></i>
+                      <span>مفتوح يومياً من ٨ صباحاً - ٨ مساءً</span>
+                    </div>
+                  </div>
+                </>
+              )}
+              {shouldShowLanguage("en") && (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 font-latin">Our Office at Your Service</h3>
+                  <p className="text-muted-foreground text-lg mb-6 font-latin">
+                    Our office is located in an ideal location on Al-Sarbis Street, Al-Mahallak Al-Janoubi, equipped with the latest technology to serve you in the best possible way.
+                  </p>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center justify-center lg:justify-end">
+                      <i className="fas fa-map-marker-alt text-primary text-xl mr-3"></i>
+                      <span className="font-latin">Al-Sarbis Street, Al-Mahallak Al-Janoubi, Al-Hader, Aleppo</span>
+                    </div>
+                    <div className="flex items-center justify-center lg:justify-end">
+                      <i className="fas fa-clock text-primary text-xl mr-3"></i>
+                      <span className="font-latin">Open Daily 8 AM - 8 PM</span>
+                    </div>
+                  </div>
+                </>
+              )}
+              {shouldShowLanguage("tr") && (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 font-latin">Ofisimiz Hizmetinizde</h3>
+                  <p className="text-muted-foreground text-lg mb-6 font-latin">
+                    Ofisimiz Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi'de ideal bir konumda yer almaktadır ve size en iyi şekilde hizmet vermek için en son teknoloji ile donatılmıştır.
+                  </p>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center justify-center lg:justify-end">
+                      <i className="fas fa-map-marker-alt text-primary text-xl mr-3"></i>
+                      <span className="font-latin">Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi, Halep</span>
+                    </div>
+                    <div className="flex items-center justify-center lg:justify-end">
+                      <i className="fas fa-clock text-primary text-xl mr-3"></i>
+                      <span className="font-latin">Her Gün Açık 8:00 - 20:00</span>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+          
           {/* Stats Section */}
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-border" data-testid="stats-section">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -614,6 +733,189 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Showcase Section */}
+      <section id="services" className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            {shouldShowLanguage("ar") && (
+              <>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">خدماتنا المالية</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  خدمات مالية شاملة وموثوقة لتلبية جميع احتياجاتكم
+                </p>
+              </>
+            )}
+            {shouldShowLanguage("en") && (
+              <>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Our Financial Services</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-latin">
+                  Comprehensive and reliable financial services to meet all your needs
+                </p>
+              </>
+            )}
+            {shouldShowLanguage("tr") && (
+              <>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Mali Hizmetlerimiz</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-latin">
+                  Tüm ihtiyaçlarınızı karşılamak için kapsamlı ve güvenilir mali hizmetler
+                </p>
+              </>
+            )}
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border border-border p-6">
+              <div className="w-full h-80 rounded-2xl overflow-hidden relative border border-border/50 mb-4">
+                <div className="w-full h-full bg-gradient-to-br from-secondary/20 to-primary/10 flex items-center justify-center p-4">
+                  <img 
+                    src="/images/hawala-transfer-banner.jpg" 
+                    alt={
+                      shouldShowLanguage("ar") ? "خدمات حوالة سريعة وآمنة - مكتب دوفيز المالي" :
+                      shouldShowLanguage("en") ? "Fast and secure money transfer services - DOVIZ Financial" :
+                      "Hızlı ve güvenli para transferi hizmetleri - DOVIZ Mali"
+                    }
+                    className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    {shouldShowLanguage("ar") && (
+                      <>
+                        <h4 className="font-bold text-lg mb-2">حوالات فورية</h4>
+                        <p className="text-white/90">خدمة ٢٤/٧ لتحويل الأموال بأمان</p>
+                      </>
+                    )}
+                    {shouldShowLanguage("en") && (
+                      <>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Instant Transfers</h4>
+                        <p className="text-white/90 font-latin">24/7 service for secure money transfers</p>
+                      </>
+                    )}
+                    {shouldShowLanguage("tr") && (
+                      <>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Anında Transferler</h4>
+                        <p className="text-white/90 font-latin">Güvenli para transferi için 24/7 hizmet</p>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              {shouldShowLanguage("ar") && (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6">خدمات الحوالة والصرافة</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-exchange-alt text-accent text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2">صرافة العملات</h4>
+                        <p className="text-muted-foreground">صرف جميع العملات الأجنبية بأفضل الأسعار التنافسية في السوق</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-paper-plane text-primary text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2">حوالات سريعة</h4>
+                        <p className="text-muted-foreground">تحويل الأموال إلى جميع أنحاء العالم خلال دقائق معدودة</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-shield-check text-green-600 text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2">أمان وثقة</h4>
+                        <p className="text-muted-foreground">نضمن أمان وسرية جميع معاملاتكم المالية</p>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+              {shouldShowLanguage("en") && (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 font-latin">Money Transfer & Exchange Services</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-exchange-alt text-accent text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Currency Exchange</h4>
+                        <p className="text-muted-foreground font-latin">Exchange all foreign currencies at the best competitive rates in the market</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-paper-plane text-primary text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Fast Transfers</h4>
+                        <p className="text-muted-foreground font-latin">Transfer money worldwide within minutes</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-shield-check text-green-600 text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Security & Trust</h4>
+                        <p className="text-muted-foreground font-latin">We guarantee the security and confidentiality of all your financial transactions</p>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+              {shouldShowLanguage("tr") && (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 font-latin">Para Transferi ve Döviz Hizmetleri</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-exchange-alt text-accent text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Döviz Bozdurma</h4>
+                        <p className="text-muted-foreground font-latin">Tüm yabancı para birimlerini piyasadaki en iyi rekabetçi oranlarla değiştirin</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-paper-plane text-primary text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Hızlı Transferler</h4>
+                        <p className="text-muted-foreground font-latin">Dünya çapında dakikalar içinde para transferi</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i className="fas fa-shield-check text-green-600 text-xl"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 font-latin">Güvenlik ve Güven</h4>
+                        <p className="text-muted-foreground font-latin">Tüm mali işlemlerinizin güvenliğini ve gizliliğini garanti ediyoruz</p>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -622,7 +924,7 @@ export default function Home() {
               <>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">تواصل معنا</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  نحن هنا لخدمتكم في قلب قرية الحاضر. زوروا مكتبنا أو تواصلوا معنا عبر الهاتف
+                  نحن هنا لخدمتكم في قلب المحللق الجنوبي. زوروا مكتب دوفيز أو تواصلوا معنا عبر الهاتف
                 </p>
               </>
             )}
@@ -630,7 +932,7 @@ export default function Home() {
               <>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Contact Us</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-latin">
-                  We are here to serve you in the heart of Al-Hader village. Visit our office or contact us by phone
+                  We are here to serve you in the heart of Al-Mahallak Al-Janoubi. Visit DOVIZ office or contact us by phone
                 </p>
               </>
             )}
@@ -638,7 +940,7 @@ export default function Home() {
               <>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 font-latin">Bizimle İletişime Geçin</h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-latin">
-                  Al-Hader köyünün kalbinde size hizmet etmek için buradayız. Ofisimizi ziyaret edin veya telefonla bizimle iletişime geçin
+                  Al-Mahallak Al-Janoubi'nin kalbinde size hizmet etmek için buradayız. DOVIZ ofisini ziyaret edin veya telefonla bizimle iletişime geçin
                 </p>
               </>
             )}
@@ -657,13 +959,13 @@ export default function Home() {
                     {shouldShowLanguage("ar") && (
                       <>
                         <h3 className="font-bold text-lg mb-2">عنواننا</h3>
-                        <p className="text-muted-foreground">المحللق الجنوبي، شارع السربيس<br/>مدينة حلب، سوريا</p>
+                        <p className="text-muted-foreground">المحللق الجنوبي، شارع السرفيس<br/>الحاضر، حلب، سوريا</p>
                       </>
                     )}
                     {shouldShowLanguage("en") && (
                       <>
                         <h3 className="font-bold text-lg mb-2 font-latin">Our Address</h3>
-                        <p className="text-muted-foreground font-latin">Al-Mahallak Al-Janoubi, Al-Sarbis Street<br/>Aleppo City, Syria</p>
+                        <p className="text-muted-foreground font-latin">Al-Mahallak Al-Janoubi, Al-Sarbis Street<br/>Al-Hader, Aleppo, Syria</p>
                       </>
                     )}
                     {shouldShowLanguage("tr") && (
@@ -723,7 +1025,7 @@ export default function Home() {
                   {shouldShowLanguage("ar") && <h4 className="font-bold mb-2">اتصل بنا</h4>}
                   {shouldShowLanguage("en") && <h4 className="font-bold mb-2 font-latin">Call Us</h4>}
                   {shouldShowLanguage("tr") && <h4 className="font-bold mb-2 font-latin">Arayın</h4>}
-                  <p className="text-sm text-muted-foreground">+90 535 500 25 04</p>
+                  <p className="text-sm text-muted-foreground" dir="ltr">+90 535 500 25 04</p>
                 </a>
                 
                 <a href="https://wa.me/905355002504" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-whatsapp">
@@ -731,7 +1033,7 @@ export default function Home() {
                     <i className="fab fa-whatsapp text-white text-xl"></i>
                   </div>
                   <h4 className="font-bold mb-2">WhatsApp</h4>
-                  <p className="text-sm text-muted-foreground">+90 535 500 25 04</p>
+                  <p className="text-sm text-muted-foreground" dir="ltr">+90 535 500 25 04</p>
                 </a>
                 
                 <a href="https://t.me/alhaderfinancial" className="bg-white rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all text-center group" data-testid="contact-telegram">
@@ -744,36 +1046,104 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Map Placeholder */}
+            {/* Interactive Map and Hawala Banner */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-border" data-testid="contact-map">
               {shouldShowLanguage("ar") && <h3 className="font-bold text-lg mb-4">موقعنا على الخريطة</h3>}
-              {shouldShowLanguage("en") && <h3 className="font-bold text-lg mb-4 font-latin">Our Location</h3>}
-              {shouldShowLanguage("tr") && <h3 className="font-bold text-lg mb-4 font-latin">Konumumuz</h3>}
+              {shouldShowLanguage("en") && <h3 className="font-bold text-lg mb-4 font-latin">Our Location on Map</h3>}
+              {shouldShowLanguage("tr") && <h3 className="font-bold text-lg mb-4 font-latin">Haritadaki Konumumuz</h3>}
               
-              <div className="w-full h-80 bg-secondary rounded-xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                  <div className="w-full h-full bg-gradient-to-br from-primary to-accent"></div>
-                </div>
-                <div className="relative text-center">
-                  <div className="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                    <i className="fas fa-map-marker-alt text-white text-2xl"></i>
+              <div className="w-full h-80 rounded-2xl overflow-hidden relative border border-border/50 mb-4">
+                {/* Google Maps Embed */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.5!2d37.0476118!3d35.9871219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDU5JzEzLjYiTiAzN8KwMDInNTEuNCJF!5e0!3m2!1sen!2s!4v1000000000000!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style={{border: 0}}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={
+                    shouldShowLanguage("ar") ? "موقع مكتب دوفيز المالي على الخريطة" :
+                    shouldShowLanguage("en") ? "DOVIZ Financial Office Location on Map" :
+                    "DOVIZ Mali Ofis Harita Konumu"
+                  }
+                ></iframe>
+                
+                {/* Map overlay with location info */}
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg max-w-xs">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                      <i className="fas fa-map-marker-alt text-white text-sm"></i>
+                    </div>
+                    <div>
+                      {shouldShowLanguage("ar") && <h4 className="font-bold text-sm">مكتب دوفيز المالي</h4>}
+                      {shouldShowLanguage("en") && <h4 className="font-bold text-sm font-latin">DOVIZ Financial</h4>}
+                      {shouldShowLanguage("tr") && <h4 className="font-bold text-sm font-latin">DOVIZ Mali</h4>}
+                    </div>
                   </div>
+                  <p className="text-xs text-muted-foreground">
+                    {shouldShowLanguage("ar") && "شارع السرفيس، المحللق الجنوبي، الحاضر"}
+                    {shouldShowLanguage("en") && <span className="font-latin">Al-Sarbis Street, Al-Mahallak Al-Janoubi, Al-Hader</span>}
+                    {shouldShowLanguage("tr") && <span className="font-latin">Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi, Al-Hader</span>}
+                  </p>
+                </div>
+                
+                {/* Direct link to Google Maps */}
+                <a 
+                  href="https://www.google.com/maps?q=35.9871219,37.0476118"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors flex items-center gap-2"
+                >
+                  <i className="fas fa-external-link-alt"></i>
+                  {shouldShowLanguage("ar") && <span className="text-sm">فتح في خرائط جوجل</span>}
+                  {shouldShowLanguage("en") && <span className="text-sm font-latin">Open in Google Maps</span>}
+                  {shouldShowLanguage("tr") && <span className="text-sm font-latin">Google Maps'te Aç</span>}
+                </a>
+              </div>
+              
+              {/* Quick directions and contact */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="text-center p-3 bg-secondary/50 rounded-xl">
+                  <i className="fas fa-directions text-primary text-xl mb-2"></i>
                   {shouldShowLanguage("ar") && (
                     <>
-                      <h4 className="font-bold text-lg">المحللق الجنوبي</h4>
-                      <p className="text-muted-foreground">حلب، سوريا</p>
+                      <h4 className="font-bold text-sm mb-1">كيفية الوصول</h4>
+                      <p className="text-xs text-muted-foreground">شارع السرفيس، المحللق الجنوبي، الحاضر</p>
                     </>
                   )}
                   {shouldShowLanguage("en") && (
                     <>
-                      <h4 className="font-bold text-lg font-latin">Al-Mahallak Al-Janoubi</h4>
-                      <p className="text-muted-foreground font-latin">Aleppo, Syria</p>
+                      <h4 className="font-bold text-sm mb-1 font-latin">How to Get There</h4>
+                      <p className="text-xs text-muted-foreground font-latin">Al-Sarbis Street, Al-Mahallak Al-Janoubi, Al-Hader</p>
                     </>
                   )}
                   {shouldShowLanguage("tr") && (
                     <>
-                      <h4 className="font-bold text-lg font-latin">Al-Mahallak Al-Janoubi</h4>
-                      <p className="text-muted-foreground font-latin">Halep, Suriye</p>
+                      <h4 className="font-bold text-sm mb-1 font-latin">Nasıl Gidilir</h4>
+                      <p className="text-xs text-muted-foreground font-latin">Al-Sarbis Caddesi, Al-Mahallak Al-Janoubi</p>
+                    </>
+                  )}
+                </div>
+                
+                <div className="text-center p-3 bg-accent/10 rounded-xl">
+                  <i className="fas fa-phone text-accent text-xl mb-2"></i>
+                  {shouldShowLanguage("ar") && (
+                    <>
+                      <h4 className="font-bold text-sm mb-1">اتصل للاستفسار</h4>
+                      <p className="text-xs text-muted-foreground" dir="ltr">+90 535 500 25 04</p>
+                    </>
+                  )}
+                  {shouldShowLanguage("en") && (
+                    <>
+                      <h4 className="font-bold text-sm mb-1 font-latin">Call for Inquiry</h4>
+                      <p className="text-xs text-muted-foreground font-latin" dir="ltr">+90 535 500 25 04</p>
+                    </>
+                  )}
+                  {shouldShowLanguage("tr") && (
+                    <>
+                      <h4 className="font-bold text-sm mb-1 font-latin">Bilgi İçin Arayın</h4>
+                      <p className="text-xs text-muted-foreground font-latin" dir="ltr">+90 535 500 25 04</p>
                     </>
                   )}
                 </div>
@@ -859,17 +1229,17 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3 space-x-reverse">
                   <i className="fas fa-phone text-accent"></i>
-                  <span className="text-background/80">+90 535 500 25 04</span>
+                  <span className="text-background/80" dir="ltr">+90 535 500 25 04</span>
                 </li>
                 <li className="flex items-center space-x-3 space-x-reverse">
                   <i className="fab fa-whatsapp text-accent"></i>
-                  <span className="text-background/80">+90 535 500 25 04</span>
+                  <span className="text-background/80" dir="ltr">+90 535 500 25 04</span>
                 </li>
                 <li className="flex items-center space-x-3 space-x-reverse">
                   <i className="fas fa-map-marker-alt text-accent"></i>
-                  {shouldShowLanguage("ar") && <span className="text-background/80">المحللق الجنوبي، حلب</span>}
-                  {shouldShowLanguage("en") && <span className="text-background/80 font-latin">Al-Mahallak Al-Janoubi, Aleppo</span>}
-                  {shouldShowLanguage("tr") && <span className="text-background/80 font-latin">Al-Mahallak Al-Janoubi, Halep</span>}
+                  {shouldShowLanguage("ar") && <span className="text-background/80">المحللق الجنوبي، الحاضر، حلب</span>}
+                  {shouldShowLanguage("en") && <span className="text-background/80 font-latin">Al-Mahallak Al-Janoubi, Al-Hader, Aleppo</span>}
+                  {shouldShowLanguage("tr") && <span className="text-background/80 font-latin">Al-Mahallak Al-Janoubi, Al-Hader, Halep</span>}
                 </li>
               </ul>
             </div>
@@ -878,17 +1248,17 @@ export default function Home() {
           <div className="border-t border-background/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             {shouldShowLanguage("ar") && (
               <p className="text-background/60 text-sm">
-                © 2024 مكتب الحاضر المالي. جميع الحقوق محفوظة.
+                © 2024 مكتب دوفيز المالي. جميع الحقوق محفوظة.
               </p>
             )}
             {shouldShowLanguage("en") && (
               <p className="text-background/60 text-sm font-latin">
-                © 2024 Al-Hader Financial Office. All rights reserved.
+                © 2024 DOVIZ Financial Office. All rights reserved.
               </p>
             )}
             {shouldShowLanguage("tr") && (
               <p className="text-background/60 text-sm font-latin">
-                © 2024 Al-Hader Mali Ofis. Tüm hakları saklıdır.
+                © 2024 DOVIZ Mali Ofis. Tüm hakları saklıdır.
               </p>
             )}
             
@@ -897,16 +1267,47 @@ export default function Home() {
               {shouldShowLanguage("ar") && <span className="text-background/60 text-sm">اللغة:</span>}
               {shouldShowLanguage("en") && <span className="text-background/60 text-sm font-latin">Language:</span>}
               {shouldShowLanguage("tr") && <span className="text-background/60 text-sm font-latin">Dil:</span>}
-              <select 
-                value={currentLanguage}
-                onChange={(e) => changeLanguage(e.target.value)}
-                className="bg-background/10 border border-background/20 rounded-lg px-3 py-1 text-sm text-background focus:outline-none focus:ring-2 focus:ring-accent/50"
-                data-testid="footer-language-selector"
-              >
-                <option value="ar">العربية</option>
-                <option value="en">English</option>
-                <option value="tr">Türkçe</option>
-              </select>
+              
+              <div className="flex bg-background/10 rounded-lg p-1 border border-background/20">
+                <button
+                  onClick={() => changeLanguage("ar")}
+                  className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-all ${
+                    currentLanguage === "ar" 
+                      ? "bg-background/20 text-background" 
+                      : "text-background/70 hover:text-background hover:bg-background/10"
+                  }`}
+                  title="العربية"
+                >
+                  <span>🇵🇸</span>
+                  <span>عربي</span>
+                </button>
+                
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-all ${
+                    currentLanguage === "en" 
+                      ? "bg-background/20 text-background" 
+                      : "text-background/70 hover:text-background hover:bg-background/10"
+                  }`}
+                  title="English"
+                >
+                  <span>🇺🇸</span>
+                  <span className="font-latin">EN</span>
+                </button>
+                
+                <button
+                  onClick={() => changeLanguage("tr")}
+                  className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-all ${
+                    currentLanguage === "tr" 
+                      ? "bg-background/20 text-background" 
+                      : "text-background/70 hover:text-background hover:bg-background/10"
+                  }`}
+                  title="Türkçe"
+                >
+                  <span>🇹🇷</span>
+                  <span className="font-latin">TR</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
